@@ -1,5 +1,6 @@
-Django==4.1.3
-django-filter==22.1
-djangorestframework==3.14.0
-Markdown==3.4.1
-django-cors-headers==3.13.0
+Django==4.1.3   # Framework Django
+django-cors-headers==3.13.0 # Para requisições realizadas por algum fontend
+django-filter==22.1 # Para criar filtros no DRF
+djangorestframework==3.14.0 # Framework REST para Django
+Markdown==3.4.1 # Suporte de MD para o DRF
+python-decouple==3.6    # Para ler arquivos .env
