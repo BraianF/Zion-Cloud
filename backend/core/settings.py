@@ -27,6 +27,7 @@ MAIN_SERVER = config('MAIN_SERVER', default=False, cast=bool)
 # Application definition
 
 INSTALLED_APPS = [
+    'management',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
