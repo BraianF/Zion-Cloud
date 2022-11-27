@@ -1,0 +1,6 @@
+bpython==0.23   # A fancy interface to the Python interactive interpreter
+coverage==6.5.0    # Code coverage testing for Python
+django-browser-reload==1.6.0
+django-debug-toolbar==3.7.0 # A configurable set of panels that display various debug information about the current request/response.
+pip-tools==6.10.0 # pip-tools keeps your pinned dependencies fresh.
+rich==12.6.0
