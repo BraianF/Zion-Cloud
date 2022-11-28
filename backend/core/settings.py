@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     # 3rd Party
     'corsheaders',
     'rest_framework',
+    
+    # Project Apps
+    'customers',
 ]
 
 MIDDLEWARE = [
