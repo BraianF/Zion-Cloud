@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     
     # Project Apps
     'customers',
+    'servers',
 ]
 
 MIDDLEWARE = [
