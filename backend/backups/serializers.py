@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from .models import Backup
+from servers.models import Server
 
 class BackupSerializer(serializers.HyperlinkedModelSerializer):
     url = serializers.HyperlinkedIdentityField(
@@ -8,10 +9,13 @@ class BackupSerializer(serializers.HyperlinkedModelSerializer):
         lookup_field='pk',
         read_only=True
     )
+    server = serializers.HyperlinkedRelatedField(queryset=Server.objects.all(), view_name='servers:detail-update-destroy')
+    server_name = serializers.CharField(source='server', read_only=True)
     class Meta:
         model = Backup
         # fields = '__all__'
         fields = [
+            'pk',
             'url',
             'description',
             'daily_retention',
@@ -24,5 +28,6 @@ class BackupSerializer(serializers.HyperlinkedModelSerializer):
             'created',
             'updated',
             'active',
-            'server'
+            'server',
+            'server_name',
         ]
