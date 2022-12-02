@@ -44,4 +44,5 @@ npm run serve
 ```
 
 TODO Colocar a url do backend em variável global
+
 TODO Adicionar a url do frontend para a constante CORS_ALLOWED_ORIGINS em settings.py
