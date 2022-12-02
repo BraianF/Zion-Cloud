@@ -3,6 +3,9 @@
 Ferramenta de backup com gerenciamento através da web.
 Realiza transferência de dados através de SSH ou localmente (útil para compartilhamentos de máquinas Windows montadas por smb)
 
+## Vídeo da apresentação do projeto
+https://youtu.be/5ctdSIEAGAM
+
 ## Funções da ferramenta
 
 - [ ] Gerenciamento de clientes
