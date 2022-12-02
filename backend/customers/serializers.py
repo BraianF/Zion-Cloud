@@ -4,7 +4,7 @@ from .models import Customer
 
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     url = serializers.HyperlinkedIdentityField(
-        view_name='customers:detail-update-drestry',
+        view_name='customers:detail-update-destroy',
         lookup_field='pk',
         read_only=True
     )

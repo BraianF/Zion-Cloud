@@ -20,7 +20,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='127.0.0.1', cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='127.0.0.1', cast=Csv())
 
 MAIN_SERVER = config('MAIN_SERVER', default=False, cast=bool)
 
@@ -170,4 +170,6 @@ REST_FRAMEWORK = {
 ###############
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
+    'http://192.168.0.99:8080',
+    'http://172.16.31.197:8080',
 ]
