@@ -11,7 +11,7 @@ from rich import print
 BKP_CONFIG_DIR = Path("/tmp/zion/conf.d")
 BKP_CONFIG_DIR.mkdir(parents=True,exist_ok=True)
 
-TEMPLATE_FILE = settings.BASE_DIR.parent / "utils/template.conf"
+TEMPLATE_FILE = settings.BASE_DIR.parent / "backend/utils/template.conf"
 
 class Command(BaseCommand):
     help = 'Registra os arquivos de configuracao na pasta de controle do Zion'
@@ -29,11 +29,11 @@ class Command(BaseCommand):
             config = config.replace(
                 "{backup_name}", f"backup_name = {backup.description}"
                 ).replace(
-                "{source_host}", f"source_host = {backup.server.ip_address}"
+                "{source_host}", f"source_host = {backup.server.ip_address}"  # type: ignore
                 )
             
             rules = backup.source_folders
-            rules = rules + "\n- *"
+            rules = rules + "\n- *\n"
             
             conf_file_path.write_text(config)
             rules_file_path.write_text(rules)
